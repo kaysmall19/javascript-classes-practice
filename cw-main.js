@@ -2,6 +2,25 @@
 // Create a class Product that represents a product sold online. A product has a price, quantity and name.
 //The class should have a method that prints a product's information in the following format: Banana, price 1.1, amount 13.
 //Create two instances of the class and call the method created to print the product's details.
+class Product
+{
+    constructor(price, quantity, name)
+    {
+        this.price = price;
+        this.quantity = quantity;
+        this.name = name;
+    };
+    printAllProducts()
+    {
+        alert(`Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}.`)
+    };
+}
+
+let product1 = new Product("Steak", "price 10","amount 2");
+let product2 = new Product("pasta","price 2.5", "amount 1");
+product1.printAllProducts();
+product2.printAllProducts();
+
 
 // Problem 2:
 // Define a class called Pet with three properties, type, breed and age.
