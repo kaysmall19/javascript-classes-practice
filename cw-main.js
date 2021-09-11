@@ -83,3 +83,109 @@
 //Create another instance of this class called teacher2 with an empty student array. Add two students to teacher1 using the class method. 
 //Add two students to teacher2 using the class method. List all students associated with teacher1 using the class method. 
 //List all studnets associated with teacher2 using the class method.
+class Person 
+{
+    constructor(name, age, interests,)
+    {
+        this.name = name;
+        this.age = age;
+        this. interests = interests;
+    };
+    bio()
+    {
+        console.log(`${this.name} is ${this.age}, and likes ${this.interests}`)
+    };
+// print()
+// {
+//     console.log(`${this.bio}`);
+// };
+};
+// person1.bio();
+// person2.bio();
+// person2.print();
+
+class Student extends Person
+{
+
+    constructor(name, age, interests, cohort)
+    {
+        super(name, age, interests);
+        this.cohort = cohort;
+    };
+    studentBio()
+    {
+        console.log(`${this.name} is ${this.age}, likes ${this.interests}, and is in cohort ${this.cohort}`);
+    };
+};
+// student1.bio();
+// student1.studentBio();
+// student2.studentBio();
+// student3.studentBio();
+// student4.studentBio();
+
+ class Teacher extends Person
+ {
+     constructor(name, age, interests, subject, bio)
+     {
+         super(name, age, interests, bio);
+         this.subject = subject;
+         this.studentsArr = [];
+
+     }; 
+
+        addStudent(studentname)
+        {
+            this.studentsArr;
+            let string = JSON.stringify(studentname);
+             return this.studentsArr.push(string);
+
+        }; 
+
+
+        print()
+        {
+            console.log(`${this.name} is ${this.age}, likes ${this.interests}, teaches ${this.subject} and has ${this.studentsArr.length} students`);
+        };
+
+
+      studentPrint(student, teacher)
+      {
+        console.log(`${student.name} is ${student.age}, likes ${student.interests}, is in cohort ${student.cohort} and is a student of ${teacher.name}`);
+      };
+        // teacherBio()
+        // {
+        //     this.addStudent()
+        //     console.log(studentsArr + " students");
+        //     // console.log(`${this.name} is ${this.age}, likes ${this.interests}, teaches ${this.subject} and has ${this.studentsArr} students!`);
+        // };
+
+ };
+ let teacher1 = new Teacher("Dominique Dallas", "28", "Traveling", "Spanish");
+ let teacher2 = new Teacher("Savannah Estes", "26", "Reading", "English");
+
+exercise3 = () =>
+{
+let person1 = new Person ("Lisa Malone", "16", "Reading & Art");
+let person2 = new Person("Tiara Jones", "17", "Dancing & Collections");
+
+let student1 = new Student("Lisa Malone", "16", "Reading & Art", "2024");
+let student2 = new Student("Tiara Jones", "17", "Dancing & Collections", "2024");
+let student3 = new Student("William Lyons", "21", "Dancing" , "2023");
+let student4 = new Student("Anthony Kelly", "22", "Football" , "2023");
+
+
+ teacher1.addStudent(student1);
+ teacher1.addStudent(student2);
+ teacher1.print();
+ teacher1.studentPrint(student1, teacher1);
+ teacher1.studentPrint(student2, teacher1);
+
+
+ teacher2.addStudent(student3);
+ teacher2.addStudent(student4);
+ teacher2.print();
+ teacher2.studentPrint(student3, teacher2);
+ teacher2.studentPrint(student4, teacher2);
+
+};
+exercise3();
